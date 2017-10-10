@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 
 public interface UserRepository extends JpaRepository <User, Integer> {
-    User findAccountByEmailAndMagic(String email, String magic);
+    User findUserByUserAndMagic(String user, String magic);
 }

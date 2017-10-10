@@ -2,21 +2,27 @@
 package com.syntaxerror.ezz0034.business;
 
 import com.syntaxerror.ezz0034.models.Ticket;
+import com.syntaxerror.ezz0034.repositories.TicketRepository;
 import javafx.collections.ObservableList;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class TicketBusiness {
+    
+    @Autowired
+    private TicketRepository ticketRepository;
 
     public Ticket createNewTicket(Ticket ticket) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return ticketRepository.save(ticket);
     }
 
     public void removeTicketById(int tktid) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ticketRepository.delete(tktid);
     }
 
     public ObservableList<Ticket> getAllTickets() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return (ObservableList<Ticket>) ticketRepository.findAll();
     }
     
 }

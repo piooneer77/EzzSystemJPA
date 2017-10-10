@@ -1,25 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.syntaxerror.ezz0034.business;
 
+import com.syntaxerror.ezz0034.models.Ticket;
 import com.syntaxerror.ezz0034.models.Vendor;
+import com.syntaxerror.ezz0034.repositories.VendorRepository;
+import java.util.List;
 import javafx.collections.ObservableList;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-/**
- *
- * @author karim.gohar
- */
+@Component
 public class VendorBusiness {
+    
+    @Autowired
+    private VendorRepository vendorRepository;
 
     public void createNweVendor(Vendor vendor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        vendorRepository.save(vendor);
     }
 
-    public ObservableList<String> getListCustomer() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ObservableList<Vendor> getListCustomer() {
+        return (ObservableList<Vendor>) vendorRepository.findAll();
     }
     
 }

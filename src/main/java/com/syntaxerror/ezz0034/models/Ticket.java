@@ -3,9 +3,18 @@ package com.syntaxerror.ezz0034.models;
 
 
 import java.time.LocalDate;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-
+@Entity
+@Table( name = "Ticket_tbl" )
 public class Ticket {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int tktid;
     private String tktnumber;
     private String tktcst;

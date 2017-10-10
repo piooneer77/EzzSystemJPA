@@ -10,8 +10,6 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -192,12 +190,12 @@ public class HomePageController extends BaseController implements Initializable 
 //        tc_route.setCellValueFactory(new PropertyValueFactory<>("tktroute"));
 //        tc_depdate.setCellValueFactory(new PropertyValueFactory<>("tktDepDate"));
 //        tc_vendor.setCellValueFactory(new PropertyValueFactory<>("tktven"));
-        
-        ObservableList<String> searchList = FXCollections.observableArrayList("All","Ticket Number","Employee", "Company", "Vendor");
-        cmb_searchwith.setItems(searchList);
-        
-        ticketBusiness = new TicketBusiness();
-        tv_Tickets.setItems(ticketBusiness.getAllTickets()); // </editor-fold>
+//        
+//        ObservableList<String> searchList = FXCollections.observableArrayList("All","Ticket Number","Employee", "Company", "Vendor");
+//        cmb_searchwith.setItems(searchList);
+//        
+//        ticketBusiness = new TicketBusiness();
+//        tv_Tickets.setItems(ticketBusiness.getAllTickets());
         // </editor-fold>
         
     }    

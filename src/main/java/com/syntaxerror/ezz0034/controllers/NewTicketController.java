@@ -116,12 +116,12 @@ public class NewTicketController extends BaseController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        customerBusiness = new CustomerBusiness();
-        employeeBusiness = new EmployeeBusiness();
-        vendorBusiness = new VendorBusiness();
-        cb_tktCustomer.setItems(customerBusiness.getListCustomer());
-        cb_tktEmployee.setItems(employeeBusiness.getListCustomer());
-        cb_tktVendor.setItems(vendorBusiness.getListCustomer());
+//        customerBusiness = new CustomerBusiness();
+//        employeeBusiness = new EmployeeBusiness();
+//        vendorBusiness = new VendorBusiness();
+//        cb_tktCustomer.setItems(customerBusiness.getListCustomer());
+//        cb_tktEmployee.setItems(employeeBusiness.getListCustomer());
+//        cb_tktVendor.setItems(vendorBusiness.getListCustomer());
     }    
     
     @FXML

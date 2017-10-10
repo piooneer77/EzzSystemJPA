@@ -35,7 +35,7 @@ public class BaseNavigation {
     protected void goToCustomerPage(ActionEvent event) throws IOException{
         Stage primaryStage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(getClass().getResource("/Customer/NewCustomer.fxml").openStream());
+        Parent root = loader.load(getClass().getResource("/fxml/NewCustomer.fxml").openStream());
         ((Node)(event.getSource())).getScene().getWindow().hide();
         Scene scene = new Scene(root, 450, 300);
         primaryStage.setTitle("New Customer");
@@ -46,7 +46,7 @@ public class BaseNavigation {
     protected void goToEmployeePage(ActionEvent event) throws IOException{
         Stage primaryStage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(getClass().getResource("/Employee/NewEmployee.fxml").openStream());
+        Parent root = loader.load(getClass().getResource("/fxml/NewEmployee.fxml").openStream());
         ((Node)(event.getSource())).getScene().getWindow().hide();
         Scene scene = new Scene(root, 450, 300);
         primaryStage.setTitle("New Employee");
@@ -57,7 +57,7 @@ public class BaseNavigation {
     protected void goToLoginPage(ActionEvent event) throws IOException{
         Stage primaryStage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(getClass().getResource("/ezzsystem001/LoginPage.fxml").openStream());
+        Parent root = loader.load(getClass().getResource("/fxml/LoginPage.fxml").openStream());
         ((Node)(event.getSource())).getScene().getWindow().hide();
         Scene scene = new Scene(root, 450, 300);
         primaryStage.setTitle("Login");
@@ -68,7 +68,7 @@ public class BaseNavigation {
     protected void goToTicketPage(ActionEvent event) throws IOException{
         Stage primaryStage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(getClass().getResource("/Ticket/NewTicket.fxml").openStream());
+        Parent root = loader.load(getClass().getResource("/fxml/NewTicket.fxml").openStream());
         ((Node)(event.getSource())).getScene().getWindow().hide();
         Scene scene = new Scene(root, 450, 300);
         primaryStage.setTitle("New Ticket");
@@ -79,7 +79,7 @@ public class BaseNavigation {
     protected void goToVendorPage(ActionEvent event) throws IOException{
         Stage primaryStage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(getClass().getResource("/Vendor/NewVendor.fxml").openStream());
+        Parent root = loader.load(getClass().getResource("/fxml/NewVendor.fxml").openStream());
         ((Node)(event.getSource())).getScene().getWindow().hide();
         Scene scene = new Scene(root, 450, 300);
         primaryStage.setTitle("New Vendor");

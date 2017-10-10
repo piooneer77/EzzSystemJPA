@@ -1,8 +1,18 @@
 
 package com.syntaxerror.ezz0034.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table( name = "Employee_tbl" )
 public class Employee {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int empid;
     private String empname;
 
